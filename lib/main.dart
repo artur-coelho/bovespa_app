@@ -76,24 +76,30 @@ class _HomeState extends State<Home> {
                         controller: myController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-
                         ),
                         style: TextStyle(fontSize: 18, color: Colors.blue,),
-
                       ),
                       FlatButton(
+                        color: Colors.blue,
                           onPressed: () {
-
+                            return showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    content: Text("valor da ação"
+                                        //snapshot.data["results"]["BIDI4"]["price"]
+                                            //.toStringAsFixed(2)
+                                        ),
+                                  );
+                                }
+                            );
                           },
                           child: Text(
-                            "ATUALIZAR",
+                            "CONSULTAR",
                             style: TextStyle(
                                 fontSize: 20,
-                                color: Colors.blue[900]),
+                                color: Colors.black),
                           )
-                      ),
-                      Center(
-                          child: Text("Hello"),
                       ),
                     ],
                   ),
